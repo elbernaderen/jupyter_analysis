@@ -1,3 +1,9 @@
+
+# BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
+This is the Jupyter Notebook that can be edited, and allows us to see if there exist a correlation in between the technical indicators and the increments of the close values of the next candles.
+## Must install
+[jupyter notbook](https://jupyter.org/install) and [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists.
+
 # analysis.py
 Edit a Crypto-currency Historical Data and add some technicals indicators so the Data can be analized with a jupyter notebook.
 
@@ -5,8 +11,6 @@ Edit a Crypto-currency Historical Data and add some technicals indicators so the
 [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. 
 
 [sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model.
-
-[pickle](https://docs.python.org/3/library/pickle.html#:~:text=%E2%80%9CPickling%E2%80%9D%20is%20the%20process%20whereby,back%20into%20an%20object%20hierarchy.) is needed to save the model in a .sav file, so we can use it in a easy way with the backtester [backtest_amplitudes.py](https://github.com/elbernaderen/machine-learning-signal-finder#backtest_strategypy) or the signal sender [messenger_d.py](https://github.com/elbernaderen/machine-learning-signal-finder#messenger_dpy).
 
 
 ## Usage
@@ -41,8 +45,6 @@ Once the program have finished, a classification report will be printed in conso
 
 
 
-# BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
-This is the Jupyter Notebook that can be edited
 
 # bina.py
 ## Description
