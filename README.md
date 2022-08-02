@@ -2,7 +2,7 @@
 # BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
 This is the Jupyter Notebook that can be edited, and allows us to see if there exist a correlation in between the technical indicators and the increments of the close values of the next candles.
 ## Must install
-[jupyter notbook](https://jupyter.org/install) and [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists.
+[jupyter notebook](https://jupyter.org/install) and [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. [sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model.
 
 # analysis.py
 Edit a Crypto-currency Historical Data and add some technicals indicators so the Data can be analized with a jupyter notebook.
@@ -10,7 +10,7 @@ Edit a Crypto-currency Historical Data and add some technicals indicators so the
 ## Must install
 [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. 
 
-[sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model.
+
 
 
 ## Usage
