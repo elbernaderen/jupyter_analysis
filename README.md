@@ -1,8 +1,16 @@
 
 # BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
-This is the Jupyter Notebook that can be edited, and allows us to see if there exist a correlation in between the technical indicators and the increments of the close values of the next candles.
+This is the Jupyter Notebook that can be edited, and allows us to see if there exist a correlation in between the technical indicators, like:
+
+    macd
+    macd histogram
+    macd signal
+    RSI
+    media
+    
+and the increments of the close values of the next candles. With this notebook, it is easy to interpretate the information using Pandas and Numpy, so then we can edit [amplitudes.py](https://github.com/elbernaderen/machine-learning-signal-finder#amplitudespy) following our results and results.
 ## Must install
-[jupyter notebook](https://jupyter.org/install) and [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. [sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model.
+[jupyter notebook](https://jupyter.org/install) and [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. [sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model. [Seaborn](https://seaborn.pydata.org/) is used to make graphs.
 
 # analysis.py
 Edit a Crypto-currency Historical Data and add some technicals indicators so the Data can be analized with a jupyter notebook.
