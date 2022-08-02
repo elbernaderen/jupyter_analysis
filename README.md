@@ -54,7 +54,7 @@ Also need [yaml](https://pypi.org/project/PyYAML/) to save and read the api data
 To use it, we need to have a Binance account. If you don't have one, can create a account following [this](https://www.binance.com/es/activity/referral-entry?fromActivityPage=true&ref=LIMIT_MYXYAGGF) and by doing that will be my refered and also colaborate with this project. Once that you have an account, you need to generate an API, as [follows](https://resilient-quant-trader.medium.com/scraping-crypto-currency-historical-data-from-binance-using-python-9c0e77c04df7). Then, have to set the API_key and the API_ secret in the config yml file located in the ignore folder.
 
 # call_bina.py
-Interface to download the Crypto-currency Historical Data to use them as base for [amplitudes.py](https://github.com/elbernaderen/machine-learning-signal-finder#amplitudespy) .
+Interface to download the Crypto-currency Historical Data to use them as base for [analysis.py](https://github.com/elbernaderen/jupyter_analysis/blob/main/README.md#analysispy) .
 ## Description
 This script calls the function **store_ohlcv** from [bina.py](https://github.com/elbernaderen/machine-learning-signal-finder#binapy), that is used to download the Crypto-currency Historical Data, setting the name of the Crypto-currency in capital letters, name of the file that will be created, year, month and day since when take in count.
 ## Usage:
@@ -63,7 +63,7 @@ To download a Crypto-currency Historical Data for [amplitudes.py](https://github
 ```bash
 py call_bina.py ETHUSDT base 2019 1 1
 ```
-To download a Crypto-currency Historical Data for [analysis.py](https://github.com/elbernaderen/machine-learning-signal-finder#backtest_amplitudespy) and a Crypto-currency, for example  BTCUSDT since a determinated date, must be called the program in console as continue:
+To download a Crypto-currency Historical Data for [analysis.py](https://github.com/elbernaderen/jupyter_analysis/blob/main/README.md#analysispy) and a Crypto-currency, for example  BTCUSDT since a determinated date, must be called the program in console as continue:
 ```bash
 py call_bina.py BTCUSDT backtest 2022 3 5
 ```
