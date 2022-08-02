@@ -42,7 +42,9 @@ def verify(file, vol_p=0):
     index_.append("high")
     index_.append("low")
     index_.append("close")
-
+    index_.append("mean_rel_15_30")
+    index_.append("mean_rel_30_60")
+    index_.append("mean_rel_60_100")
     k = pd.DataFrame(columns=index_)
     # Generate a list to analize the slope with linear regression from cero to rows
     X = [x for x in range(0, rows)]
@@ -50,7 +52,7 @@ def verify(file, vol_p=0):
     X_next_short = [x for x in range(0, in_)]
     for i in range(p + vol_p, len(file.index)):
         Y = [file["close"][t] for t in range(i - p, i - in_)]
-        Y_long = [file["close"][t] for t in range(i - vol_p - in_,i - in_)]
+        Y_long = [file["close"][t] for t in range(i - vol_p - in_, i - in_)]
         Y_next_short = [file["close"][t] for t in range(i - in_, i)]
         slope_prev_short, intercept, r_value, p_value_2, std_err = linregress(X, Y)
         slope_prev, intercept, r_value, p_value_2, std_err = linregress(X_long, Y_long)
@@ -58,9 +60,12 @@ def verify(file, vol_p=0):
         vol = [file["volume"][i - x] for x in range(in_, p + 1 + vol_p)]
         vol_prom = np.mean(vol)
        # si_no = 1
-        hi = np.max([(file["high"][i - t] - file["close"][i - in_]) / file["close"][i - in_] for t in range(in_ + 1)])
-        low = np.min([(file["low"][i - t] - file["close"][i - in_]) / file["close"][i - in_] for t in range(in_ + 1)])
-        close = np.mean([(file["close"][i - t] - file["close"][i - in_]) / file["close"][i - in_] for t in range(in_ + 1)])
+        hi = np.max([(file["high"][i - t] - file["close"][i - in_]) / file["close"][i - in_] for t in range(in_ )])
+        low = np.min([(file["low"][i - t] - file["close"][i - in_]) / file["close"][i - in_] for t in range(in_ )])
+        close = np.mean([(file["close"][i - t] - file["close"][i - in_]) / file["close"][i - in_] for t in range(in_ )])
+        mean_rel_15_30 = np.mean([file["close"][t] for t in range(i - 15-p, i-in_)]) / np.mean([file["close"][t] for t in range(i - 30 - in_, i- in_)])
+        mean_rel_30_60 = np.mean([file["close"][t] for t in range(i - 30-p, i-in_)]) / np.mean([file["close"][t] for t in range(i - 60 - in_, i- in_)])
+        mean_rel_60_100 = np.mean([file["close"][t] for t in range(i - 60-p, i-in_)]) / np.mean([file["close"][t] for t in range(i - 100 - in_, i- in_)])
         # if the values in the row pass the filter, they are considered to make the predictor model
         # hi is the list with variaton of the candles we consider to know if the price rises or fall
         row = list()
@@ -82,7 +87,10 @@ def verify(file, vol_p=0):
                     slope_next_short,
                     hi,
                     low,
-                    close]
+                    close,
+                    mean_rel_15_30,
+                    mean_rel_30_60,
+                    mean_rel_60_100]
         k.loc[len(k.index)] = row
         k = k.dropna()
     return k
