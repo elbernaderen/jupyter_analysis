@@ -9,7 +9,7 @@ def name_col(rows):
         index_.append(f"volume_{cin}")
         index_.append(f"mart_{cin}")
         index_.append(f"mart_inv_{cin}")
-        index_.append(f"ampl_2{cin}")
+        index_.append(f"ampl_2_{cin}")
         index_.append(f"rsi_{cin}")
         index_.append(f"macd_{cin}")
         index_.append(f"macd_h{cin}")
