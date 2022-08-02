@@ -30,7 +30,7 @@ periods = int(
 p = rows + in_
 temp = input("Enter the interval to consider, ex: 1d or 1h or 30m or 15m or 5m \n")
 
-vol_p = int(input("Enter how many candels to consider if the market is ascending or descending: \n"))
+vol_p = int(input("Enter how many candels consider to calculate the volume mean \n"))
 
 
 def verify(file, vol_p=0):
