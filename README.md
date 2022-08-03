@@ -1,6 +1,6 @@
 
 # BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
-This is the Jupyter Notebook that can be edited, and allows us to see if there exist a correlation in between the technical indicators, like:
+This is the Jupyter Notebook that can be edited, and allow us to see if there exist a correlation in between the technical indicators, like:
 
     macd
     macd histogram
