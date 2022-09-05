@@ -1,12 +1,24 @@
+
+# BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
+This is the Jupyter Notebook that can be edited, and allow us to see if there exist a correlation in between the technical indicators, like:
+
+    macd
+    macd histogram
+    macd signal
+    RSI
+    media
+    
+and the increments of the close values of the next candles. With this notebook, it is easy to interpretate the information using Pandas and Numpy, so then we can edit [amplitudes.py](https://github.com/elbernaderen/machine-learning-signal-finder#amplitudespy) following our results and results.
+## Must install
+[jupyter notebook](https://jupyter.org/install) and [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. [sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model. [Seaborn](https://seaborn.pydata.org/) is used to make graphs.
+
 # analysis.py
 Edit a Crypto-currency Historical Data and add some technicals indicators so the Data can be analized with a jupyter notebook.
 
 ## Must install
 [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/install/) and [scipy](https://scipy.org/install/) libraries are used to work with data frames and lists. 
 
-[sklearn](https://scikit-learn.org/stable/install.html) is a library used to create and train the machine learning model.
 
-[pickle](https://docs.python.org/3/library/pickle.html#:~:text=%E2%80%9CPickling%E2%80%9D%20is%20the%20process%20whereby,back%20into%20an%20object%20hierarchy.) is needed to save the model in a .sav file, so we can use it in a easy way with the backtester [backtest_amplitudes.py](https://github.com/elbernaderen/machine-learning-signal-finder#backtest_strategypy) or the signal sender [messenger_d.py](https://github.com/elbernaderen/machine-learning-signal-finder#messenger_dpy).
 
 
 ## Usage
@@ -37,12 +49,10 @@ The interval of the Crypto-currency Historical Data to consider.
 Enter how many candels consider to calculate the volume mean:
 ```
 To calculate the mean volume,so it can know if the volume has a increment or in other words if there are big participants, ex: 300.
-Once the program have finished, a classification report will be printed in console, with the accuracy, precission, etc of the model, and a .sav file will be created with the model ready for be used.
+Once the program have finished, a classification report will be printed in console, with the accuracy, precission, etc of the model, and a .csv file with all the historical data ready to use with the Jupyter Notebook.
 
 
 
-# BTCUSDT_ADAUSDT_XMRUSDT_ETHUSDT_BNBUSDT_30m_hour_day.ipynb
-This is the Jupyter Notebook that can be edited
 
 # bina.py
 ## Description
